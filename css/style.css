@@ -1,0 +1,129 @@
+body {
+    background: url("../img/gray_jean.png");
+    padding: 5px;
+}
+#commentApp {
+    width: 500px;
+    margin: 15px auto;
+}
+li:not(.edit) input {
+    display:none;
+}
+p.comment-text {
+    overflow: hidden;
+    min-height: 30px;
+}
+li.edit p.comment-text span{
+    display: none;
+}
+li.edit input {
+    display: block;
+}
+.comment {
+    padding: 5px;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.comment .tools {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+input[name=edit] {
+    height: 30px;
+    position: absolute;
+    top: 30px;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    float: left;
+    margin-right: 15px;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+/* Animation */
+
+@-moz-keyframes fadeInUp {
+  0% {
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-o-keyframes fadeInUp {
+  0% {
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-ms-keyframes fadeInUp {
+  0% {
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; }
+}
+
+/* added custom styles */
+#delete-btn {
+    margin-left: 10px;
+    margin-right: 85px;
+}
+
+#footer p {
+    text-align: center;
+    color: #444;
+}
+
+/* bootstrap overrides */
+.thumbnail {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}

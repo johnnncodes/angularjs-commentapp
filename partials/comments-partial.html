@@ -1,0 +1,30 @@
+<div id="commentApp" class="row-fluid">
+    <ul id="comments" class="unstyled">
+        <li ng-repeat="comment in comments" class="thumbnail"  id="comment-{{$index}}">
+            <div class='comment fadeInUp'>
+                <img src="http://www.gravatar.com/avatar/{{comment.email}}" class="thumbnail avatar" alt="{{comment.name}}'s avatar" />
+                <span class="username muted">{{comment.name}}</span>
+                <p class='comment-text'>
+                    <span>{{comment.comment}}</span>
+                    <input id="editable" type="text" name="edit" ng-model="comment.comment"/>
+                </p>
+                <div class='tools'>
+                    <div class="btn-group">
+                        <a href="" ng-click="editComment($index, comment)" class="edit btn btn-success btn-mini">Edit</a>
+                        <a href="" ng-click="deleteComment(comment)" class="remove btn btn-warning btn-mini">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <form ng-submit="addComment()">
+        <fieldset>
+            <legend>Add your comment</legend>
+            <input type="text" ng-model="name" class="span12" placeholder="Your name" />
+            <input type="text" ng-model="email" class="span12" placeholder="your email"/>
+            <textarea ng-model="comment" class="span12" cols="30" rows="3" placeholder="your comment"></textarea>
+            <a hred="" id="delete-btn" ng-click="deleteAllComments()" class="btn btn-danger pull-right">Delete all comments</a>
+            <input type="submit" class="btn btn-primary pull-right" value="Add your comment!">
+        </fieldset>
+    </form>
+</div>
